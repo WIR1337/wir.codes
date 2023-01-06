@@ -1,0 +1,17 @@
+{
+  "name": "wir.codes",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "deploy": "vite build && cp package.json ./dist/package.json && rsync -rav --exclude='*.png' --exclude='*.jpg' --exclude='*.jpeg' ./dist/ root@polygon:/var/www/html/",
+    "preview": "vite preview"
+  },
+  "devDependencies": {
+    "@sveltejs/vite-plugin-svelte": "^2.0.0",
+    "svelte": "^3.54.0",
+    "vite": "^4.0.0"
+  }
+}
