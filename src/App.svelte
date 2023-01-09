@@ -2,17 +2,6 @@
   import { currencyPrice } from "./store";
   // import sql from "./db.js";
 
-  // async function getUsersOver() {
-  //   const users = await sql`
-  //   select
-  //     city
-  //   from weather
-  // `;
-  //   console.log("Result SQL: ", users);
-  //   // users = Result [{ name: "Walter", age: 80 }, { name: 'Murray', age: 68 }, ...]
-  //   return users;
-  // }
-
   async function getPrice() {
     let data = await fetch(
       "https://api.binance.com/api/v3/ticker/price?symbols=[%22USDTRUB%22,%22EURUSDT%22]"
