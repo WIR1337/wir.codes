@@ -1,6 +1,5 @@
 <script>
   import { currencyPrice } from "./store";
-  // import sql from "./db.js";
 
   async function getPrice() {
     let data = await fetch(
